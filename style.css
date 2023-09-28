@@ -155,10 +155,11 @@ html, body {
     z-index: 1;
 }
 .lantern-handle {
-    border: 6px solid hsl(257,41%,27%);
+    border: 6px solid hsl(19,98%,75%);
     border-radius: 50px;
-    height: 105px;
-    width: 220px;
+    height: 0px;
+    width: 127px;
+    margin-top: 85px;
 }
 .lantern-inner {
     animation: lantern-anim 1.2s ease-in-out alternate infinite;
@@ -326,11 +327,8 @@ html, body {
     width: 30px;
 }
 .planet::before {
-    animation: planet-light-anim 5.5s forwards linear infinite;
-    background: var(--light);
-    background-size: 80%;
-    background-position: center;
-    background-repeat: no-repeat;
+    animation: planet-light-anim 2.5s forwards linear infinite;
+    background-color: var(--light);
     border-radius: 50%;
     content: '';
     position: absolute;
@@ -347,12 +345,12 @@ html, body {
     transform: scale(.9) translateY(-80px);
 }
 .planet:nth-child(2) {
-    --bg: hsl(337, 59%, 45%);
-    --light: url(bae1.png);
+    --bg: hsl(344,83%,63%);
+    --light: hsl(19,98%,75%);
     --orbit: 160px;
     animation-delay: -2s;
     animation-duration: 5.5s;
-    transform: scale(2) translateY(-20px);
+    transform: scale(.8) translateY(-20px);
 }
 .planet:nth-child(3) {
     --bg: hsl(344,83%,63%);
@@ -364,11 +362,11 @@ html, body {
 }
 .planet:nth-child(4) {
     --bg: hsl(322,41%,43%);
-    --light: url(bae2.png);;
+    --light: hsl(348,88%,65%);
     --orbit: 120px;
     animation-delay: -3.7s;
     animation-duration: 4.2s;
-    transform: scale(2.3) translateY(38px);
+    transform: scale(.8) translateY(75px);
 }
 .planet:nth-child(5) {
     --bg: hsl(322,41%,43%);
@@ -380,10 +378,9 @@ html, body {
 }
 .planet:nth-child(6) {
     --orbit: 90px;
-    --light: url(bae3.png);
-    animation-delay: .8s;
-    animation-duration: 3.2s;
-    transform: scale(1.5) translateY(100px);
+    animation-delay: .5s;
+    animation-duration: 4.2s;
+    transform: scale(.9) translateY(150px);
 }
 
 @keyframes planet-anim {
@@ -408,14 +405,8 @@ html, body {
     0% {
         transform: translateX(-100%);
     }
-    25% {
-        transform: translateX(-25%);
-    }
     50% {
         transform: translateX(0);
-    }
-    75% {
-        transform: translateX(25%);
     }
     100% {
         transform: translateX(100%);
